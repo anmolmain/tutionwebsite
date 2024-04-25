@@ -15,7 +15,7 @@ def contact_homepage(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been sent!')
-            return redirect('/')  # Redirect to the home page or a thank you page
+            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
         else:
             messages.error(request, 'Form submission failed. Please check the form.')
     else:
@@ -28,7 +28,7 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')  # Redirect to a success page
+            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
         else:
             print(form.errors)  # Print form errors to the console
             messages.error(request, 'Form submission failed. Please check the form.')
@@ -46,7 +46,7 @@ def high_school_registration(request):
         form = HighSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')  # Replace with your success URL name
+            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
     else:
         form = HighSchoolStudentForm()   
     context = {'form': form}
@@ -58,7 +58,7 @@ def middle_school_registration(request):
         form = MiddleSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')  # Redirect to a success page or home
+            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
     else:
         form = MiddleSchoolStudentForm()
     context = {'form': form}
@@ -70,7 +70,7 @@ def lower_school_registration(request):
         form = LowerSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/')  # Redirect to a success page
+            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
     else:
         form = LowerSchoolStudentForm()
     context = {'form': form}
@@ -161,4 +161,7 @@ def highschool(request):
 
 def contactus(request):
     return render(request, 'contactus.html')
+
+def formsubmitted(request):
+    return render(request, 'formsubmitted.html')
 

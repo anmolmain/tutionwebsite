@@ -16,6 +16,7 @@ urlpatterns = [
     path("lowerschool/", views.lowerschool, name="lowerschool"),
     path("middleschool/", views.middleschool, name="middleschool"),
     path("highschool/", views.highschool, name="highschool"),
+    path("formsubmitted/", views.formsubmitted, name="formsubmitted"),
     path('lower_school_registration/', views.lower_school_registration, name='lower_school_registration'),
     path('middle_school_registration/', views.middle_school_registration, name='middle_school_registration'),
     path('high_school_registration/', views.high_school_registration, name='high_school_registration'),
