@@ -22,6 +22,8 @@ urlpatterns = [
     path('high_school_registration/', views.high_school_registration, name='high_school_registration'),
     path('contact_us/', views.contact_us, name='contact_us'),
     path('contact_homepage/', views.contact_homepage, name='contact_homepage'),
+    path('pricing/', views.pricing, name='pricing'),
+    
 
 
 ]

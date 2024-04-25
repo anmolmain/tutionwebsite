@@ -46,7 +46,7 @@ def high_school_registration(request):
         form = HighSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
+            return redirect('/pricing')  # Redirect to the home page or a thank you page
     else:
         form = HighSchoolStudentForm()   
     context = {'form': form}
@@ -58,7 +58,7 @@ def middle_school_registration(request):
         form = MiddleSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
+            return redirect('/pricing')  # Redirect to the home page or a thank you page
     else:
         form = MiddleSchoolStudentForm()
     context = {'form': form}
@@ -70,7 +70,7 @@ def lower_school_registration(request):
         form = LowerSchoolStudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('/formsubmitted')  # Redirect to the home page or a thank you page
+            return redirect('/pricing')  # Redirect to the home page or a thank you page
     else:
         form = LowerSchoolStudentForm()
     context = {'form': form}
@@ -164,4 +164,7 @@ def contactus(request):
 
 def formsubmitted(request):
     return render(request, 'formsubmitted.html')
+
+def pricing(request):
+    return render(request, 'pricing.html')
 
