@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enrollment - Quantum Tuition Academy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+      /* Custom styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+      }
+      
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      h1 {
+        color: #1b1a55;
+      }
+      
+      h3 {
+        color: #1b1a55;
+        border-bottom: 2px solid #1b1a55;
+        padding-bottom: 10px;
+      }
+      
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      ul li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+      
+      .btn-primary {
+        background-color: #1b1a55;
+        border-color: #1b1a55;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0a0a33;
+        border-color: #0a0a33;
+      }
+      body {
+        background-color: #f0f7ff;
+      }
+      
+      .card-header {
+        background-color: #1b1a55;
+        color: white;
+      }
+      
+      .btn-primary {
+        background-color: #1b1a55;
+        border-color: #1b1a55;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0a0a33;
+        border-color: #0a0a33;
+      }
+      
+      .footer-1 {
+        background-color: #1b1a55;
+      }
+      
+      .footer {
+        background-color: #0a0a33;
+      }
+    </style>
+    <script>
+      function enrollnowLower(){
+        window.location.href='/lowerschool'
+      }
+      function enrollnowMiddle(){
+        window.location.href='/middleschool'
+      }
+      function enrolhigh(){
+        window.location.href='/highschool'
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-5">Enrollment Application form</h1>
+
+      <!-- Lower School -->
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="500">
+          <h3 class="">Lower School</h3>
+          <ul class="list-unstyled">
+            <li>Nursery (2/3s)</li>
+            <li>Pre-K (4/5s)</li>
+            <li>First Grade (6/7s)</li>
+            <li>Second Grade (8/s)</li>
+            <li>Third Grade (8/s)</li>
+          </ul>
+          <button class="btn btn-primary" onclick="enrollnowLower()">Enroll now</button>
+        </div>
+
+        <!-- Middle School -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="500">
+          <h3 class="">Middle School</h3>
+          <ul class="list-unstyled">
+            <li>Fourth Grade</li>
+            <li>Fifth Grade</li>
+            <li>Sixth Grade</li>
+            <li>Seventh Grade</li>
+            <li>Eighth Grade</li>
+          </ul>
+          <button class="btn btn-primary" onclick="enrollnowMiddle()">Enroll now</button>
+        </div>
+
+        <!-- High School -->
+        <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="500">
+          <h3 class="">High School</h3>
+          <ul class="list-unstyled">
+            <li>Ninth Grade</li>
+            <li>Tenth Grade</li>
+            <li>10+1 Grade</li>
+            <li>10+2 Grade</li>
+            <li>Spoken English</li>
+          </ul>
+          <button class="btn btn-primary" onclick="enrolhigh()">Enroll now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+  </body>
+{% endblock %}

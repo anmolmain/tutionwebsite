@@ -1,0 +1,330 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Tuition Academy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        body {
+          background-color: #f0f7ff;
+        }
+        
+        .card-header {
+          background-color: #1b1a55;
+          color: white;
+        }
+        
+        .btn-primary {
+          background-color: #1b1a55;
+          border-color: #1b1a55;
+        }
+        
+        .btn-primary:hover {
+          background-color: #0a0a33;
+          border-color: #0a0a33;
+        }
+        
+        .footer-1 {
+          background-color: #1b1a55;
+        }
+        
+        .footer {
+          background-color: #0a0a33;
+        }
+        
+        .slide1 {
+            background: url(https://images.pexels.com/photos/1704119/pexels-photo-1704119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+            background-size: cover;
+            background-color: indianred;
+            height: 100vh;
+            background-attachment: fixed;
+        }
+        
+        .text {
+            font-weight: 900;
+            width: 60%;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            position: relative;
+        }
+        
+        h1,
+        h3 {
+            color: #1B1A55;
+        }
+        
+        .fclass {
+        
+            border-left: 5px solid #1B1A55;
+        }
+        
+        .whychoose {
+            padding: 5%;
+            background-color: #1B1A55;
+            color: white;
+            text-align: center;
+            margin-bottom: 2%;
+        }
+        
+        .insideDiv {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 5%;
+            color: white;
+            font-size: larger;
+        }
+        .insideDiv img{
+            margin: auto;
+            width: 25%;
+            filter: invert();
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="slide1 d-flex justify-content-center align-items-center text-white" data-aos="fade-up" data-aos-duration="500">
+      <div class="text-center p-5 rounded" style="background-color: rgba(37, 37, 37, 0.7); ">
+        <h1 style="color: white;">Welcome to Quantum Tuition Academy</h1>
+        <button type="button" class="btn btn-primary mt-3" onclick="enrollnow()">Enroll now</button>
+        <script>
+          function enrollnow(){
+            window.location.href='/enroll'
+          }
+        </script>
+      </div>
+    </div>
+    <div class="slide2" data-aos="fade-up" data-aos-duration="500">
+      <div class="whychoose">
+        <h1 class="text-center mb-4" style="color: white;">Education programs</h1>
+        <p class="lead text-center">Empowering minds through innovative, holistic education programs for lifelong success</p>
+      </div>
+      <div class="container">
+        <div class="d-flex" style="width: 100vw;">
+          <div class="row m-auto" style="width: 100%;">
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="500">
+              <h3 class="">Lower School</h3>
+              <p>> Nursery (2/3s)</p>
+              <p>> Pre-K (4/5s)</p>
+              <p>> First Grade(6/7s)</p>
+              <p>> Second Grade(8/s)</p>
+              <p>> Third Grade(8/s)</p>
+              <button type="button" class="btn btn-primary mt-1" onclick="enrollnowLower()">Enroll now</button>
+              <script>
+                function enrollnowLower(){
+                  window.location.href='/lowerschool'
+                }
+              </script>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="500">
+              <h3 class="">Middle School</h3>
+              <p>> Fourth Grade</p>
+              <p>> Fith Grade</p>
+              <p>> Sixth Grade</p>
+              <p>> Seventh Grade</p>
+              <p>> Eighth Grade</p>
+              <button type="button" class="btn btn-primary mt-1" onclick="enrollnowMiddle()">Enroll now</button>
+              <script>
+                function enrollnowMiddle(){
+                  window.location.href='/middleschool'
+                }
+              </script>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="500">
+              <h3 class="">High School</h3>
+              <p>> Ninth Grade</p>
+              <p>> Tenth Grade</p>
+              <p>> 10+1 Grade</p>
+              <p>> 10+2 Grade</p>
+              <p>> Spoken English</p>
+              <button type="button" class="btn btn-primary mt-1" onclick="enrolhigh()">Enroll now</button>
+              <script>
+                function enrolhigh(){
+                  window.location.href='/highschool'
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="500">
+      <div class="whychoose">
+        <h1 class="text-center mb-4 mt-4" style="color: white;">To help children realize their potential</h1>
+        <p class="lead text-center mb-5">Inspiring children to unlock their abilities, nurturing growth, fostering confidence, and paving the way for their bright future.</p>
+      </div>
+      <div class="container">
+        <div class="row" style="justify-content: center;align-items: center; display: flex;"data-aos="fade-up" data-aos-duration="500">
+          <img src="https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="col-md-6" />
+          <div class="textDiv col-md-6">
+            <h1 class="mb-5">Quantum Tuition Academy: Empowering Future Generations</h1>
+            <p>At Quantum Tuition Academy, we are committed to nurturing young minds and empowering them for a brighter future. Our dedicated team of educators provides personalized attention, fostering a love for learning and ensuring academic excellence. Join us on this educational journey towards success and unlock your child's full potential.</p>
+          </div>
+        </div>
+        <div class="row mt-5" style="justify-content: center;align-items: center; display: flex;"data-aos="fade-up" data-aos-duration="500">
+          <div class="textDiv col-md-6">
+            <h1 class="mb-5">About Our Tuition Center</h1>
+            <p>At Quantum Tuition Academy, we're committed to excellence in education. Our experienced tutors provide personalized learning, focusing on each student's strengths and weaknesses. With innovative teaching methods and a nurturing environment, we empower students to achieve academic success and unlock their full potential. Join us in shaping a brighter future!</p>
+          </div>
+          <img src="https://images.pexels.com/photos/301926/pexels-photo-301926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="col-md-6" />
+        </div>
+        <div class="row mt-5" style="justify-content: center;align-items: center; display: flex;"data-aos="fade-up" data-aos-duration="500">
+          <img src="https://images.pexels.com/photos/159844/cellular-education-classroom-159844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" class="col-md-6" />
+          <div class="textDiv col-md-6">
+            <h1 class="mb-5">About Our Tuition Center</h1>
+            <p>At Quantum Tuition Academy, we are dedicated to nurturing young minds and helping students unlock their full potential. With our experienced educators and innovative teaching methods, we offer personalized tutoring programs designed to support academic growth and build confidence. Join us on the journey to academic excellence!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="whychoose" data-aos="fade-up" data-aos-duration="500">
+      <h1 class="text-center mb-4 mt-4" style="color: white;">Browse and book hundreds of classes</h1>
+    </div>
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+      <div class="row">
+        <div class="col-md-6 fclass">
+          <h3 class="">Mathematics</h3>
+          <h3 class="">Physics</h3>
+          <h3 class="">Chemistry</h3>
+        </div>
+        <div class="col-md-6 fclass">
+          <h3 class="">Science</h3>
+          <h3 class="">E.V.S</h3>
+          <h3 class="">Social Studies</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 fclass">
+          <h3 class="">Economics</h3>
+          <h3 class="">Political Science</h3>
+          <h3 class="">History</h3>
+        </div>
+        <div class="col-md-6 fclass">
+          <h3 class="">Biology</h3>
+          <h3 class="">Computer</h3>
+          <h3 class="">General Knowledge</h3>
+        </div>
+      </div>
+    </div>
+    <div class="whychoose mt-4" data-aos="fade-up" data-aos-duration="500">
+      <h1 class="text-center mb-4 mt-4" style="color: white;">Why Choose us ?</h1>
+      <p>Join our community of life long learners. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="spanTag">
+        <span>400+</span>students
+        <span>20+</span>subjects
+        <span>40+</span>teachers
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <h1 class="text-center mt-5" data-aos="fade-up" data-aos-duration="500">Testimonials</h1>
+    <div class="row mt-4" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <p>"Quantum Tuition Academy transformed my child's learning experience. Highly recommended!"</p>
+            <h5 class="card-title">- Parent 1</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <p>"The teachers are amazing and the curriculum is top-notch. A great place for education!"</p>
+            <h5 class="card-title">- Parent 2</h5>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <p>"My child's grades improved significantly after joining Quantum Tuition Academy."</p>
+            <h5 class="card-title">- Parent 3</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reachUs row" data-aos="fade-up" data-aos-duration="500">
+      <div class="insideDiv col-md-3" style="background-color: rgb(190, 126, 7);">
+        <img src=" https://img.icons8.com/?size=100&id=9659&format=png" alt="" />
+        Phone : +1234567890
+      </div>
+      <div class="insideDiv col-md-3" style="background-color: rgb(96, 201, 10);">
+        <img src="https://img.icons8.com/?size=100&id=476&format=png" alt="" />
+        Address : XYZ street country
+      </div>
+      <div class="insideDiv col-md-3" style="background-color: rgb(13, 39, 184);">
+        <img src="https://img.icons8.com/?size=100&id=12580&format=png" alt="" />
+        Email : xyz@email.com
+      </div>
+      <div class="insideDiv col-md-3" style="background-color: rgb(141, 19, 172);">
+        <img src="https://img.icons8.com/?size=160&id=42292&format=png" alt="" />
+        Office timing : Mon to fri 9:00AM to 5:00PM
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <h1 class="text-center mt-5 mb-8" data-aos="fade-up" data-aos-duration="500">Contact Us</h1>
+    <div class="row mt-4 contact-form" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-md-8 mx-auto">
+        <form method="post" action="{% url 'contact_homepage' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text"  name="name" class="form-control" placeholder="Name" />
+          </div>
+          <div class="form-group">
+            <input type="email"  name="email" class="form-control" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="4" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+      </div>
+    </div>
+    
+    <footer class="footer-1 text-white py-3 mt-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-6">
+                  <h5>About Us</h5>
+                  <p>We offer comprehensive tutoring services, personalized learning plans, and innovative educational resources.</p>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <h5>Contact Us</h5>
+                  <p>Email: contact@quantumtuition.com</p>
+                  <p>Phone: +1234567890</p>
+              </div>
+              <div class="col-lg-4 col-md-6">
+                  <h5>Location</h5>
+                  <p>123 Main Street</p>
+                  <p>City, Country</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <footer class="footer text-white text-center py-3">
+      <div class="container">
+          <span class="text-white">Quantum Tuition Academy &copy; 2024 - Empowering students through personalized education and innovative learning solutions.</span>
+      </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+{% endblock %}

@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Tuition Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <style>
+      .card-body {
+        background-color: #f5f5f5;
+      }
+      
+      .navbar {
+        background-color: whitesmoke; /* Green shade */
+        color: black;
+      }
+      
+      .navbar-brand {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        font-weight: 600;
+      }
+      
+      .navbar-nav {
+        width: 80%;
+        justify-content: space-around;
+      }
+      
+      .nav-link {
+        font-weight: 600;
+        color: black;
+        transition: color 0.1s ease-in-out;
+      }
+      
+      .navbar-text {
+        color: white;
+        font-weight: 600;
+      }
+      
+      body {
+        margin: 0px;
+        padding: 0px;
+        color: #333333;
+        background-color: #ffffff; /* White background */
+      }
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Quantum Tuition Academy</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto mb-lg-0">
+            {% if not user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/enroll">Enroll now</a>
+              </li>
+              {% comment %} <li class="nav-item">
+                <a class="nav-link" href="/contactus">Live classes</a>
+              </li> {% endcomment %}
+              <li class="nav-item">
+                <a class="nav-link" href="/contactus">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            {% endif %}
+          </ul>
+          {% if user.is_authenticated %}
+            <span style="color: black;" class="navbar-text">Welcome {{ request.user.first_name }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock %}
+    <script>
+      AOS.init({});
+  </script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

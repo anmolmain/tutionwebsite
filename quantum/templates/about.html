@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Quantum Tuition Academy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Arial', sans-serif;
+        overflow-x: hidden;
+      }
+      
+      /* Adjusting white space and content color */
+      .section-content {
+        background-color: white;
+        color: #1b1a55;
+        padding: 5% 0;
+      }
+      h2 {
+        background-color: #1b1a55;
+        color: white;
+        padding: 5%;
+      }
+      .section-content p {
+        color: #1b1a55;
+      }
+      
+      /* Card styles */
+      .card {
+        margin-bottom: 3%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .card img {
+        max-width: 100%;
+        height: auto;
+      }
+      body {
+        background-color: #f0f7ff;
+      }
+      
+      .card-header {
+        background-color: #1b1a55;
+        color: white;
+      }
+      
+      .btn-primary {
+        background-color: #1b1a55;
+        border-color: #1b1a55;
+      }
+      
+      .btn-primary:hover {
+        background-color: #0a0a33;
+        border-color: #0a0a33;
+      }
+      
+      .footer-1 {
+        background-color: #1b1a55;
+      }
+      
+      .footer {
+        background-color: #0a0a33;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Team -->
+    <div class="team-section section-content" data-aos="fade-up" data-aos-duration="500">
+      <div class="container">
+        <h2>Meet Our Team</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" class="card-img-top" alt="Team Member 1" />
+              <div class="card-body">
+                <h4 class="card-title">John Doe</h4>
+                <p class="card-text">Mathematics Expert</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/5310565/pexels-photo-5310565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="card-img-top" alt="Team Member 2" />
+              <div class="card-body">
+                <h4 class="card-title">Jane Smith</h4>
+                <p class="card-text">Science Guru</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/6238030/pexels-photo-6238030.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load" class="card-img-top" alt="Team Member 3" />
+              <div class="card-body">
+                <h4 class="card-title">Emily Brown</h4>
+                <p class="card-text">English Specialist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-section mt-5" data-aos="fade-up" data-aos-duration="500">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="card">
+          <div class="card-body">
+            <p>Welcome to Quantum Tuition Academy, where education meets innovation. With a legacy of nurturing bright minds and fostering growth, we are committed to providing quality education tailored to each student's needs.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>Our academy has been a beacon of learning for over a decade, helping students achieve their academic goals and preparing them for future success.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>We believe in the power of education to transform lives. That's why we strive to create a supportive and inspiring environment for our students.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="mission-section" data-aos="fade-up" data-aos-duration="500">
+      <div class="container">
+        <h2>Mission</h2>
+        <div class="card">
+          <div class="card-body">
+            <p>Our mission is to empower students to achieve their fullest potential through personalized education and a supportive learning environment.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>We are dedicated to providing high-quality educational programs that foster critical thinking, creativity, and lifelong learning.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>We aim to inspire a love for learning and equip students with the skills and knowledge they need to succeed in their academic and personal lives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision -->
+    <div class="vision-section" data-aos="fade-up" data-aos-duration="500">
+      <div class="container">
+        <h2>Vision</h2>
+        <div class="card">
+          <div class="card-body">
+            <p>Our vision is to be a leading educational institution known for excellence in teaching, innovation, and student success.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>We aspire to create a global community of learners who are well-equipped to meet the challenges of the 21st century.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <p>We envision a future where every student has access to quality education, regardless of their background or circumstances.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials-section section-content" data-aos="fade-up" data-aos-duration="500">
+      <div class="container">
+        <h2>What Parents Say about Quantum Tution Academy</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">"Quantum Tuition Academy transformed my child's learning experience. Highly recommended!"</p>
+                <h5 class="card-title">- Parent 1</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">"The teachers are amazing and the curriculum is top-notch. A great place for education!"</p>
+                <h5 class="card-title">- Parent 2</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-text">"My child's grades improved significantly after joining Quantum Tuition Academy. Thank's to Team Quantum tution academy"</p>
+                <h5 class="card-title">- Parent 3</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center mt-5 mb-8" data-aos="fade-up" data-aos-duration="500">Contact Us</h1>
+    <div class="row mt-4 contact-form" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-md-8 mx-auto">
+        <form method="post" action="{% url 'contact_homepage' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text"  name="name" class="form-control" placeholder="Name" />
+          </div>
+          <div class="form-group">
+            <input type="email"  name="email" class="form-control" placeholder="Email" />
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="4" placeholder="Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer-1 text-white py-3 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <h5>About Us</h5>
+            <p>We offer comprehensive tutoring services, personalized learning plans, and innovative educational resources.</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Contact Us</h5>
+            <p>Email: contact@quantumtuition.com</p>
+            <p>Phone: +1234567890</p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5>Location</h5>
+            <p>123 Main Street</p>
+            <p>City, Country</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <footer class="footer text-white text-center py-3">
+      <div class="container">
+        <span class="text-white">Quantum Tuition Academy &copy; 2024 - Empowering students through personalized education and innovative learning solutions.</span>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
+  </body>
+{% endblock %}
